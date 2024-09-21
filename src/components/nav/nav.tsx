@@ -22,7 +22,6 @@ export default function Navbar() {
       }
     }
     
-    
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -32,7 +31,7 @@ export default function Navbar() {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Se activa cuando el 60% de la sección es visible
+      threshold: 0.5, // Se activa cuando el 50% de la sección es visible
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -62,7 +61,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black shadow-md" : "bg-transparent"}`}>
       <div className="container mx-auto px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="#page-top" className={`text-4xl font-bold text-[#6dae28] ${dancingScript.className}`}>
+          <Link href="#page-top" className={`text-4xl font-bold text-[#6dae28] ${dancingScript.className}`} onClick={() => setActiveSection(null)}>
             Touché
           </Link>
 
@@ -91,7 +90,10 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`text-sm font-medium transition-colors ${activeSection === item.id ? "text-[#6dae28]" : "text-white"} hover:text-primary`}
+                    className={`text-sm font-medium transition-colors ${activeSection === item.id ? "text-[#6dae28]" : "text-white"} hover:text-[#6dae28]`}
+                    onClick={() => {
+                      setActiveSection(item.id) // Cambia la sección activa al hacer clic
+                    }}
                   >
                     {item.label}
                   </Link>
