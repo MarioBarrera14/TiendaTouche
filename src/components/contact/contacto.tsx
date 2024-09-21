@@ -36,7 +36,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 bg-[#5daa0bbb] text-white flex items-center justify-center min-h-screen">
+    <section id="contact" className="py-16 bg-green-800 text-white flex items-center justify-center min-h-screen">
       <div className="container px-4 md:px-6 max-w-2xl">
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4">
@@ -86,7 +86,7 @@ export default function ContactSection() {
             />
             <Button 
               type="submit" 
-              className="w-full bg-green-800 text-white hover:opacity-90 transition-all duration-300 text-lg font-bold py-6"
+              className="w-full bg-[#5daa0bbb] text-white hover:opacity-90 transition-all duration-300 text-lg font-bold py-6"
               disabled={isSubmitting}
             >
               {isSubmitting ? (

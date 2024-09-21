@@ -13,7 +13,7 @@ export default function Header() {
                 <Button 
   variant="outline" 
   size="lg" 
-  className="text-white border-[#6dae28] bg-[#418325] hover:bg-[#599914] hover:text-white transition-colors duration-300 rounded-none"
+  className={`text-white border-[#6dae28] bg-[#418325] hover:bg-[#599914] hover:text-white transition-colors duration-300 rounded-none ${poppins.className}`}
 >
   Discover Story
 </Button>

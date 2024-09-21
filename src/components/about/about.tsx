@@ -1,3 +1,4 @@
+import { poppins } from '@/config/fonts'
 import Image from 'next/image'
 
 export default function Component() {
@@ -16,7 +17,7 @@ export default function Component() {
               />
             </div>
           </div>
-          <div className="w-full md:w-1/2 md:pl-12">
+          <div className={`w-full md:w-1/2 md:pl-12 ${poppins.className}`}>
             <h2 className="text-3xl text-black font-bold mb-4">Our Restaurant</h2>
             <hr className="w-16 border-t-2 border-primary mb-6" />
             <p className="text-gray-600 mb-6">

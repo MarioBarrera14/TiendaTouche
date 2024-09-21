@@ -11,6 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import { poppins } from "@/config/fonts";
 
 const dishes = [
   {
@@ -120,10 +121,10 @@ export default function Component() {
   };
 
   return (
-    <section id="portfolio" className="bg-gray-100">
+    <section id="portfolio" className={`bg-gray-100 ${poppins.className}`}>
       <div
         ref={headerRef}
-        className="relative h-[40vh] bg-fixed bg-cover bg-center flex items-center justify-center"
+        className="relative h-[40vh] bg-container bg-center flex items-center justify-center"
         style={{
           backgroundImage: "url('img/gallery-bg.jpg?height=1080&width=1920')",
         }}

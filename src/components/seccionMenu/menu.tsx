@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { poppins } from "@/config/fonts";
 
 export default function Menu() {
   return (
-    <section id="restaurant-menu" className="py-16 bg-gray-100">
+    <section id="restaurant-menu" className={`py-16 bg-gray-100 ${poppins.className}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-600">Menu</h2>
