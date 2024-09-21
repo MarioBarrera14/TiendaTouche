@@ -5,34 +5,57 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { dancingScript, poppins } from "@/config/fonts"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [activeSection, setActiveSection] = React.useState<string | null>(null)
 
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
+
+      // Si estamos al inicio (en la parte superior del documento)
+      if (window.scrollY === 0) {
+        setActiveSection(null) // Apaga las luces en el home
+      }
     }
     
-    // Llamar a handleScroll inmediatamente para establecer el estado inicial
-    handleScroll()
     
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  React.useEffect(() => {
+    const sections = document.querySelectorAll("section")
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Se activa cuando el 60% de la sección es visible
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }, observerOptions)
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section))
+    }
+  }, [])
+
   const navItems = [
-    { href: "#about", label: "ABOUT" },
-    { href: "#restaurant-menu", label: "MENU" },
-    { href: "#portfolio", label: "GALLERY" },
-    { href: "#team", label: "CHEFS" },
-    { href: "#call-reservation", label: "CONTACT" },
+    { href: "#about", label: "ABOUT", id: "about" },
+    { href: "#restaurant-menu", label: "MENU", id: "restaurant-menu" },
+    { href: "#portfolio", label: "GALLERY", id: "portfolio" },
+    { href: "#chef", label: "CHEFS", id: "chef" },
+    { href: "#contact", label: "CONTACT", id: "contact" },
   ]
 
   return (
@@ -48,12 +71,13 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-white hover:text-[#6dae28] transition-colors"
+                className={`text-sm font-medium transition-colors ${activeSection === item.id ? "text-[#6dae28]" : "text-white"} hover:text-[#6dae28]`}
               >
                 {item.label}
               </Link>
             ))}
           </div>
+          
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
@@ -67,7 +91,7 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-sm font-medium text-white hover:text-primary transition-colors"
+                    className={`text-sm font-medium transition-colors ${activeSection === item.id ? "text-[#6dae28]" : "text-white"} hover:text-primary`}
                   >
                     {item.label}
                   </Link>

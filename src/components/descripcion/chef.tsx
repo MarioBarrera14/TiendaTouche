@@ -1,8 +1,9 @@
 import { poppins } from '@/config/fonts';
 import Image from 'next/image'
 
-export default function Component() {
+export default function Chef() {
   return (
+    <section id="chef">
     <div
       className={`relative min-h-screen bg-fixed bg-cover bg-center ${poppins.className}`}
       style={{
@@ -62,5 +63,6 @@ export default function Component() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
