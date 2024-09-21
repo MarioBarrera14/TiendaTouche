@@ -6,9 +6,9 @@ export default function Menu() {
     <section id="restaurant-menu" className={`py-16 bg-gray-100 ${poppins.className}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-600">Menu</h2>
-          <hr className="w-16 h-1 mx-auto bg-primary mb-4" />
-          <p className="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">Menu</h2>
+          <div className="w-16 h-1 bg-green-500 mx-auto mb-4"></div>
+          <p className="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <MenuSection

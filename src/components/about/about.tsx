@@ -19,12 +19,12 @@ export default function Component() {
           </div>
           <div className={`w-full md:w-1/2 md:pl-12 ${poppins.className}`}>
             <h2 className="text-3xl text-black font-bold mb-4">Our Restaurant</h2>
-            <hr className="w-16 border-t-2 border-primary mb-6" />
-            <p className="text-gray-600 mb-6">
+            <div className="w-16 h-1 bg-green-500 mb-6"></div>
+            <p className="text-gray-800 mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.
             </p>
             <h3 className="text-2xl font-semibold mb-4">Awarded Chefs</h3>
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.
             </p>
           </div>
