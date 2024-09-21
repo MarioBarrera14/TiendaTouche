@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#000000fa] text-[#e5e7eb] px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-12">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+        <div className="flex flex-col items-center md:items-start md:flex-row justify-between gap-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start w-full md:w-auto">
             <div className={`text-4xl md:text-5xl ${dancingScript.className} text-center md:text-left mb-4`}>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           {/* Links Section */}
-          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto ${poppins.className}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto ${poppins.className} text-center md:text-left`}>
             {/* Services */}
             <div className="flex flex-col gap-2">
               <div className="font-bold uppercase text-[#6dae28] pb-3">Services</div>
