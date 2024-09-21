@@ -1,9 +1,10 @@
+import { poppins } from '@/config/fonts';
 import Image from 'next/image'
 
 export default function Component() {
   return (
     <div
-      className="relative min-h-screen bg-fixed bg-cover bg-center"
+      className={`relative min-h-screen bg-fixed bg-cover bg-center ${poppins.className}`}
       style={{
         backgroundImage: "url('img/team-bg.jpg?height=1080&width=1920')",
       }}
@@ -13,7 +14,7 @@ export default function Component() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           MEET OUR CHEFS
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+        <div className="w-16 h-1 bg-green-500 mx-auto mb-4"></div>
         <p className="text-lg md:text-xl text-center mb-16 max-w-2xl mx-auto text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
           dapibus leonec.
@@ -41,7 +42,7 @@ export default function Component() {
           ].map((chef, index) => (
             <div key={index} className="bg-transparent p-4 md:p-6 rounded-lg">
               <div className="relative mb-6">
-                <div className="absolute inset-0 bg-primary bg-opacity-20 rounded-lg transform bg-[#37f708] w-full h-full -rotate-6"></div>
+                <div className="absolute inset-0 bg-opacity-20 rounded-lg transform bg-[#37f708] w-full h-full -rotate-6"></div>
                 <div className="relative">
                   <Image
                     src={chef.image}

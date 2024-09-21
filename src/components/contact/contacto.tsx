@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from '@/hooks/use-toast'
 import { Zap, Send } from 'lucide-react'
+import { poppins } from '@/config/fonts'
 
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -36,7 +37,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 bg-green-800 text-white flex items-center justify-center min-h-screen">
+    <section id="contact" className={`py-16 bg-green-800 text-white flex items-center justify-center min-h-screen ${poppins.className}`}>
       <div className="container px-4 md:px-6 max-w-2xl">
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4">

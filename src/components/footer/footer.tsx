@@ -3,7 +3,7 @@
 import { LuFacebook } from "react-icons/lu"
 import { FaInstagram } from "react-icons/fa"
 import Link from "next/link"
-import { dancingScript } from "@/config/fonts"
+import { dancingScript, poppins } from "@/config/fonts"
 
 export default function Footer() {
   return (
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           {/* Links Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto ${poppins.className}`}>
             {/* Services */}
             <div className="flex flex-col gap-2">
               <div className="font-bold uppercase text-[#6dae28] pb-3">Services</div>
@@ -59,7 +59,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="w-full border-t border-gray-500 my-8"></div>
-        <div className="text-center">
+        <div className={`text-center ${poppins.className}`}>
           © 2024 Asterbizz - All rights reserved.
         </div>
       </div>
