@@ -10,15 +10,15 @@ export default function Component() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       <div className="relative z-10 container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-center mb-4 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           MEET OUR CHEFS
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-        <p className="text-xl text-center mb-16 max-w-2xl mx-auto text-white">
+        <p className="text-lg md:text-xl text-center mb-16 max-w-2xl mx-auto text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
           dapibus leonec.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               name: "Mike Doe",
@@ -39,23 +39,23 @@ export default function Component() {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.",
             },
           ].map((chef, index) => (
-            <div key={index} className="bg-transparent p-6 rounded-lg ">
+            <div key={index} className="bg-transparent p-4 md:p-6 rounded-lg">
               <div className="relative mb-6">
-                <div className="absolute inset-0 bg-primary bg-opacity-20 rounded-lg transform bg-[#37f708] lg:w-[300px] -rotate-6"></div>
+                <div className="absolute inset-0 bg-primary bg-opacity-20 rounded-lg transform bg-[#37f708] w-full h-full -rotate-6"></div>
                 <div className="relative">
                   <Image
                     src={chef.image}
                     alt={`Chef ${chef.name}`}
                     width={300}
                     height={400}
-                    className="w-[300px] h-[400px] object-cover rounded-lg shadow-lg"
+                    className="w-full h-auto object-cover rounded-lg shadow-lg"
                   />
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold mb-2 text-white text-center">
+              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-white text-center">
                 {chef.name}
               </h3>
-              <p className="text-gray-300 text-center">{chef.description}</p>
+              <p className="text-sm md:text-base text-gray-300 text-center">{chef.description}</p>
             </div>
           ))}
         </div>
