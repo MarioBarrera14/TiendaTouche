@@ -202,11 +202,11 @@ export default function Component() {
           )}
           <Button
             onClick={closeModal}
-            className="absolute top-2 right-2"
+            className="absolute top-2 right-2 bg-white"
             variant="ghost"
             size="icon"
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4 bg-black" />
             <span className="sr-only">Close</span>
           </Button>
         </DialogContent>
