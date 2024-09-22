@@ -204,15 +204,16 @@ export default function Component() {
             />
           </div>
         )}
-        <Button
-          onClick={closeModal}
-          className="absolute top-2 right-2 bg-transparent hover:bg-opacity-25"
-          variant="ghost"
-          size="icon"
-        >
-          <X className="h-4 w-4" />
-          <span className="sr-only">Close</span>
-        </Button>
+       <Button
+  onClick={closeModal}
+  className="absolute top-2 right-2 bg-transparent hover:bg-white hover:text-black text-white transition-colors duration-300"
+  variant="ghost"
+  size="icon"
+>
+  <X className="h-4 w-4" />
+  <span className="sr-only">Close</span>
+</Button>
+
       </DialogContent>
     </Dialog>
   </section>
