@@ -12,16 +12,16 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start md:flex-row justify-between gap-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start w-full md:w-auto">
-            <div className={`text-4xl md:text-5xl ${dancingScript.className} text-center md:text-left mb-4`}>
+            <div className={`text-4xl md:text-5xl ${dancingScript.className} text-center text-[#6dae28] md:text-left mb-4`}>
               Touché
             </div>
             {/* Social Media Icons */}
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="flex gap-4 justify-center md:justify-start ">
               <Link href="#" aria-label="Facebook">
-                <LuFacebook className="w-6 h-6 fill-current text-white" />
+                <LuFacebook className="w-6 h-6 fill-current text-white hover:text-[#6dae28]" />
               </Link>
               <Link href="#" aria-label="Instagram">
-                <FaInstagram className="w-6 h-6 fill-current text-white" />
+                <FaInstagram className="w-6 h-6 fill-current text-white hover:text-[#6dae28]" />
               </Link>
             </div>
           </div>
