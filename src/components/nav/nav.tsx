@@ -100,7 +100,7 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-full h-[100vh] bg-[#5c9724] bg-opacity-60 sm:w-[300px] transition-all ease-in-out duration-300"
+              className="w-full h-[100vh] bg-[#5c9724] bg-opacity-80 sm:w-[300px] transition-all ease-in-out duration-300 "
             >
               <nav className="flex flex-col space-y-6 mt-4 items-center">
                 {navItems.map((item) => (
@@ -116,6 +116,9 @@ export default function Navbar() {
                   </Link>
                 ))}
               </nav>
+              <div className="flex items-center justify-center h-screen">
+                <p className={`text-white text-4xl font-bold ${dancingScript.className}`}>Touché</p>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
