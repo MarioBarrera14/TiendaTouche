@@ -210,7 +210,7 @@ export default function Component() {
   variant="ghost"
   size="icon"
 >
-  <X className="h-4 w-4" />
+  <X className="h-6 w-6" />
   <span className="sr-only">Close</span>
 </Button>
 
